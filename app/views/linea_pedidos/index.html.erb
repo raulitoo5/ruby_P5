@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Linea pedidos</h1>
+
+<div id="linea_pedidos">
+  <% @linea_pedidos.each do |linea_pedido| %>
+    <%= render linea_pedido %>
+    <p>
+      <%= link_to "Show this linea pedido", linea_pedido, class: "button" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New linea pedido", new_linea_pedido_path, class: "button" %>

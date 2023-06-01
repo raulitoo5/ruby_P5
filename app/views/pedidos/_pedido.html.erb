@@ -1,0 +1,24 @@
+<div id="<%= dom_id(pedido) %>" class="table-container">
+  <table>
+    <tr>
+      <th>Cliente:</th>
+      <td><%= pedido.cliente_id %></td>
+    </tr>
+    <tr>
+      <th>Total:</th>
+      <td><%= pedido.total %></td>
+    </tr>
+    <tr>
+      <th>Estado:</th>
+      <td><%= pedido.estado %></td>
+    </tr>
+    <tr>
+      <th>Fecha:</th>
+      <td><%= pedido.fecha %></td>
+    </tr>
+    <tr>
+      <th>Linea pedido:</th>
+      <td><%= pedido.linea_pedido_id %></td>
+    </tr>
+  </table>
+</div>

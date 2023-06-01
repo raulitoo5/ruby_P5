@@ -1,0 +1,2 @@
+class Zumo < ApplicationRecord
+end

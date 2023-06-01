@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Zumos</h1>
+
+<div id="zumos">
+  <% @zumos.each do |zumo| %>
+    <%= render zumo %>
+    <p>
+      <%= link_to "Show this zumo", zumo, class: "button" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New zumo", new_zumo_path, class: "button" %>

@@ -1,0 +1,2 @@
+class LineaPedido < ApplicationRecord
+end

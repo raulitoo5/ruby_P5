@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  precio: 9.99
+  tipo: 1
+  zumo: one
+  alcohol: one
+  refresco: one
+
+two:
+  nombre: MyString
+  precio: 9.99
+  tipo: 1
+  zumo: two
+  alcohol: two
+  refresco: two

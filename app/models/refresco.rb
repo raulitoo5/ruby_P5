@@ -1,0 +1,2 @@
+class Refresco < ApplicationRecord
+end

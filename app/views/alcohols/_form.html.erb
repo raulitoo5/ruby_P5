@@ -1,0 +1,30 @@
+<div id="<%= dom_id(alcohol) %>" class="table-container">
+  <%= form_with(model: alcohol) do |form| %>
+    <% if alcohol.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(alcohol.errors.count, "error") %> prohibited this alcohol from being saved:</h2>
+
+        <ul>
+          <% alcohol.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= form.label :nombre, style: "display: block" %></th>
+        <td><%= form.text_field :nombre %></td>
+      </tr>
+      <tr>
+        <th><%= form.label :grado, style: "display: block" %></th>
+        <td><%= form.text_field :grado %></td>
+      </tr>
+    </table>
+
+    <div class="submit-container">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

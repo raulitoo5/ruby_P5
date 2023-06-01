@@ -1,0 +1,42 @@
+<div id="<%= dom_id(cliente) %>" class="table-container">
+  <%= form_with(model: cliente) do |form| %>
+    <% if cliente.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+        <ul>
+          <% cliente.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= form.label :nombre, style: "display: block" %></th>
+        <td><%= form.text_field :nombre %></td>
+      </tr>
+      <tr>
+        <th><%= form.label :apellido, style: "display: block" %></th>
+        <td><%= form.text_field :apellido %></td>
+      </tr>
+      <tr>
+        <th><%= form.label :puntos, style: "display: block" %></th>
+        <td><%= form.number_field :puntos %></td>
+      </tr>
+      <tr>
+        <th><%= form.label :correo, style: "display: block" %></th>
+        <td><%= form.text_field :correo %></td>
+      </tr>
+      <tr>
+        <th><%= form.label :password, style: "display: block" %></th>
+        <td><%= form.text_field :password %></td>
+      </tr>
+    </table>
+
+    <div class="submit-container">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,44 @@
+<%= form_with(model: bebida) do |form| %>
+  <% if bebida.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bebida.errors.count, "error") %> prohibited this bebida from being saved:</h2>
+
+      <ul>
+        <% bebida.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <th><%= form.label :nombre %></th>
+      <td><%= form.text_field :nombre %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :precio %></th>
+      <td><%= form.text_field :precio %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :tipo %></th>
+      <td><%= form.number_field :tipo %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :zumo_id %></th>
+      <td><%= form.collection_select :zumo_id, Zumo.all, :id, :nombre %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :alcohol_id %></th>
+      <td><%= form.collection_select :alcohol_id, Alcohol.all, :id, :nombre %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :refresco_id %></th>
+      <td><%= form.collection_select :refresco_id, Refresco.all, :id, :nombre %></td>
+    </tr>
+  </table>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <%= form.submit %>
+  </div>
+<% end %>

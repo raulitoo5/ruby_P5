@@ -1,0 +1,26 @@
+<div id="<%= dom_id(refresco) %>" class="table-container">
+  <%= form_with(model: refresco) do |form| %>
+    <% if refresco.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(refresco.errors.count, "error") %> prohibited this refresco from being saved:</h2>
+
+        <ul>
+          <% refresco.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= form.label :nombre, style: "display: block" %></th>
+        <td><%= form.text_field :nombre %></td>
+      </tr>
+    </table>
+
+    <div class="submit-container">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

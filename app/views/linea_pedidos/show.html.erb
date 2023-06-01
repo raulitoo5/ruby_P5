@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @linea_pedido %>
+
+<div>
+  <%= link_to "Edit this linea pedido", edit_linea_pedido_path(@linea_pedido), class: "button" %> 
+  <%= link_to "Back to linea pedidos", linea_pedidos_path, class: "button" %>
+
+  <%= button_to "Destroy this linea pedido", @linea_pedido, method: :delete, class: "button" %>
+</div>

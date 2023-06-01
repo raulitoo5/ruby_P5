@@ -1,0 +1,26 @@
+<div id="<%= dom_id(zumo) %>" class="table-container">
+  <%= form_with(model: zumo) do |form| %>
+    <% if zumo.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(zumo.errors.count, "error") %> prohibited this zumo from being saved:</h2>
+
+        <ul>
+          <% zumo.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= form.label :nombre, style: "display: block" %></th>
+        <td><%= form.text_field :nombre %></td>
+      </tr>
+    </table>
+
+    <div class="submit-container">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

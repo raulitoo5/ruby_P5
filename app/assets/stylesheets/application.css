@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    background-image: url(fondo.jpg);
+    background-attachment: fixed;
+    background-position: 0% 0%;
+  /*  background-repeat: no-repeat; /*no-tiling background*/
+    width: 100%;
+    height: 200%;
+    background-size: 100%;
+/*   background-color: #ffffff;*/
+    margin: 10px;
+}
+ 
+
+ nav {
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ddd;
+  }
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #404040;
+    padding: 8px;
+    text-align: left;
+  }
+
+  table th {
+    background-color: #9da0a4;
+    font-weight: bold;
+  }
+
+  table td {
+    background-color: #ddd;
+    font-weight: bold;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #404040;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .button + .button {
+    margin-left: 10px;
+  }
+
+  .notice {
+    color: green;
+  }

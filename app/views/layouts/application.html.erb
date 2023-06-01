@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TallerRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="aplication.css">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+  <nav>
+  <ul>
+    <li><%= link_to "Bebidas", :bebidas %></li>
+    <li><%= link_to "Zumos", :zumos %></li>
+    <li><%= link_to "Alcoholes", :alcohols %></li>
+    <li><%= link_to "Refrescos", :refrescos %></li>
+    <li><%= link_to "Clientes", :clientes %></li>
+    <li><%= link_to "Pedidos", :pedidos %></li>
+    <li><%= link_to "Linea Pedidos", :linea_pedidos%></li>
+
+    <%= yield %>
+    </ul>
+    </nav>
+  </body>
+</html>
